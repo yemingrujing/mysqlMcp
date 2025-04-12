@@ -37,7 +37,7 @@ DB_CONFIG = {
 logger.info(f"从环境变量加载数据库配置: {DB_CONFIG['host']}/{DB_CONFIG['database']}")
 
 # 初始化MCP服务器
-server = FastMCP(name="mysql-server", description="MySQL数据库交互服务器")
+server = FastMCP(name="mysql-server", description="MySQL数据库交互服务器", log_level="ERROR")
 
 def get_db_connection():
     """创建并返回数据库连接"""
