@@ -1,15 +1,15 @@
 from mcp.server.fastmcp import FastMCP
 import pymysql
 
-mcp = FastMCP("mysql_mcp")
+mcp = FastMCP("mysql_mcp", log_level="ERROR")
 
 @mcp.tool()
 def analysis_data(amt: int) -> int:
     conn = pymysql.connect(
-        host="192.168.182.109",
+        host="192.168.147.130",
         port=3306,
-        user="root",
-        password="1234567890",
+        user="django",
+        password="gw123456",
         database="yifei_dev"
     )
     cursor = conn.cursor()
